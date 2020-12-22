@@ -16,15 +16,12 @@ body.napkin{
     }
 
     .nav .topmenu .login {
-        background: url('napkin/button.png') no-repeat center center;
+        background: url('napkin/button.png') center center no-repeat ;
         background-size: contain;
-        padding: 1em;
     }
     .nav .topmenu .theme {
-      background: url('napkin/border.png') left top repeat-x,  url('napkin/border-vert.png') left top repeat-y,  url('napkin/border-vert.png') right top repeat-y;
-      width: 5em;
-      margin: 0.5em;
-      text-align: center;
+      background: url('napkin/square.png') center center no-repeat;
+      background-size: contain;
     }
   
 

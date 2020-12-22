@@ -58,7 +58,9 @@ input.silentInput {
 
 .nav .topmenu {
     display: flex;
-    flex: 1 1 auto;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
@@ -69,6 +71,21 @@ input.silentInput {
     margin: 0.2em;
 }
 
+.nav .topmenu .theme, .nav .topmenu .login {
+    padding: 1em;
+    height: 2em;
+    width: 10%;
+    text-align: center;
+    flex-grow: 3;
+    flex-shrink: 0;
+
+}
+
+/* .nav .topmenu .login {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: content;
+} */
 
 a, a:visited {
     text-decoration: none;
