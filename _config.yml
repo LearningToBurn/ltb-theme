@@ -1,0 +1,10 @@
+title: Learning to Burn Theme
+description: The theme for the Learning to Burn educational website
+exclude: [README.md]
+include: [".well-known"]
+
+# applies pretty for all
+permalink: pretty
+
+plugins:
+  - jekyll-relative-links
