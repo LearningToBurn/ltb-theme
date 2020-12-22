@@ -59,14 +59,16 @@ input.silentInput {
 .nav .topmenu {
     display: flex;
     flex: 1 1 auto;
-    flex-direction: row-reverse;
+    flex-direction: row;
     align-items: center;
+    justify-content: space-evenly;
 }
 
 .nav .topmenu > * {
     padding: 0.3em;
     margin: 0.2em;
 }
+
 
 a, a:visited {
     text-decoration: none;

@@ -20,6 +20,13 @@ body.napkin{
         background-size: contain;
         padding: 1em;
     }
+    .nav .topmenu .theme {
+      background: url('napkin/border.png') left top repeat-x,  url('napkin/border-vert.png') left top repeat-y,  url('napkin/border-vert.png') right top repeat-y;
+      width: 5em;
+      margin: 0.5em;
+      text-align: center;
+    }
+  
 
     footer{
         background: url('napkin/border.png') left top repeat-x;
