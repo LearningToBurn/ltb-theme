@@ -184,8 +184,7 @@ footer {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    max-height: calc( 100vh - 8em);
-    height: calc( 100vh - 8em);
+    min-height: calc( 100vh - 8em);
     position: relative;
 }
 
@@ -195,7 +194,6 @@ footer {
     flex-direction: column;
     padding: 0 1em;
     position: relative;
-    overflow: hidden;
     background: rgba(255,255,255);
     z-index: 20;
 }
