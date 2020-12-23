@@ -29,9 +29,9 @@ var userChanged = function (user) {
     if(googleProfile){
       googleUserName = googleProfile.getName();
       console.log(`Signed in as ${googleUserName}`);
-      document.getElementById('signInButton').classList.add("loggedin")
-      document.getElementById('signInLabel').innerText = user.getBasicProfile().getName();
-      document.getElementById('signInPic').src = user.getBasicProfile().getImageUrl();
+      document.getElementById('signOutButton').classList.add("loggedin")
+      document.getElementById('signOutLabel').innerText = user.getBasicProfile().getName();
+      document.getElementById('signOutPic').src = user.getBasicProfile().getImageUrl();
       $('body').addClass('signedIn');
       $('body').removeClass('anon');
       $('body').removeClass('unchecked');
@@ -40,9 +40,24 @@ var userChanged = function (user) {
       if(typeof learntrack_quiz !== 'undefined') learntrack_quiz.userJwt = token;
       // visiting.loadVisited(token, $(".toc"));
     }else{
+      googleUser=null;
+      googleUserName="";
       console.log("Not currently signed in");
       $('body').addClass('anon');
       $('body').removeClass('unchecked');
       $('body').removeClass('signedIn');
     }
 };    
+
+var signOutUser = function(){
+  console.log("Signing out...")
+  auth2.signOut().then(()=>{
+    googleUser=null;
+    googleUserName="";
+    $('body').addClass('anon');
+    $('body').removeClass('unchecked');
+    $('body').removeClass('signedIn');
+    console.log("Signed out");
+    location.reload();
+  });
+}

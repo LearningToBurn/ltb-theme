@@ -15,7 +15,7 @@ body.napkin{
         background: url('napkin/border.png') left bottom repeat-x;
     }
 
-    .nav .topmenu .login {
+    .nav .topmenu .login, .nav .topmenu .logout {
         background: url('napkin/button.png') center center no-repeat ;
         background-size: contain;
     }

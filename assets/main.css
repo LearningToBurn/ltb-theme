@@ -24,14 +24,11 @@ h1 {
     vertical-align: middle;
 }
 
-.login img {
-    display: none; 
+.logout img {
+    display: inline; 
     width: 1.4em; 
     height:1.4em;
     border-radius: 0.6em;
-}
-.login.loggedin img{
-    display: inline;
 }
 
 h2 input.silentInput {
@@ -71,7 +68,7 @@ input.silentInput {
     margin: 0.2em;
 }
 
-.nav .topmenu .theme, .nav .topmenu .login {
+.nav .topmenu .theme, .nav .topmenu .login, .nav .topmenu .logout {
     padding: 1em;
     height: 2em;
     width: 10%;
@@ -82,13 +79,13 @@ input.silentInput {
     position: relative;
 }
 
-.nav .topmenu .login {
+.nav .topmenu .login, .nav .topmenu .logout {
   flex-grow: 1;
   flex-shrink: 1;
   display: flex;
   justify-content: center;
   flex-direction: row;
-
+  cursor: pointer;
 }
 
 .nav .menu{
@@ -109,6 +106,12 @@ input.silentInput {
 }
 .signedIn .nav .topmenu .theme:hover .menu {
   display: inline-block;
+}
+.signedIn .nav .topmenu .login {
+  display: none;
+}
+.anon .nav .topmenu .logout, .unchecked .nav .topmenu .logout {
+  display: none;
 }
 
 a, a:visited {
