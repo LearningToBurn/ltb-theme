@@ -1,7 +1,6 @@
 <ul class='menu'>
-{% assign sorted = site.lessons | where_exp: 'item', 'item.path contains include.theme' | sort: 'module_order' %}
+{% assign sorted = site.lessons | where: 'theme', include.theme | sort: 'module_order' %}
 {% for lesson in sorted %}
-  {% assign module = lesson.path | split: '/' %}
-  <li><a href='{{lesson.url}}'>{{ module[2] }} - {{ lesson.title }}</a></li>
+  <li><a href='{{lesson.url}}'>{{ lesson.title }}</a></li>
 {% endfor %}
 <ul>
