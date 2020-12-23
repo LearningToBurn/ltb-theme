@@ -78,7 +78,8 @@ input.silentInput {
     text-align: center;
     flex-grow: 3;
     flex-shrink: 0;
-
+    flex-direction: column;
+    position: relative;
 }
 
 .nav .topmenu .login {
@@ -86,6 +87,19 @@ input.silentInput {
   flex-shrink: 1;
   display: flex;
   justify-content: center;
+  flex-direction: row;
+
+}
+
+.nav .menu{
+  z-index: 1000;
+  position: relative;
+
+}
+.nav .menu li{
+  display: inline-block;
+  width: 100%;
+  background-color: white;
 }
 
 a, a:visited {
