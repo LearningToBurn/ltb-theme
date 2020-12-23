@@ -101,6 +101,15 @@ input.silentInput {
   width: 100%;
   background-color: white;
 }
+.nav .topmenu .theme .menu {
+  width: 80%;
+  padding: 0;
+  padding-left: 10%;
+  display: none;
+}
+.signedIn .nav .topmenu .theme:hover .menu {
+  display: inline-block;
+}
 
 a, a:visited {
     text-decoration: none;

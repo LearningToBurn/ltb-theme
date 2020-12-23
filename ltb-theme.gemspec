@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "ltb-theme"
-  spec.version       = "2.0.4"
+  spec.version       = "2.0.5"
   spec.authors       = ["peterb"]
   spec.email         = ["haumohio@gmail.com"]
 

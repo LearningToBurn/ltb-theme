@@ -23,17 +23,9 @@ body.napkin{
       background: url('napkin/square.png') center center no-repeat;
       background-size: contain;
     }
-    .nav .topmenu .theme .menu {
-      width: 80%;
-      padding: 0;
-      padding-left: 10%;
-      display: none;
-    }
+
     .nav .menu li{
       background: white url('napkin/border.png') left bottom repeat-x;
-    }
-    .nav .topmenu .theme:hover .menu {
-      display: inline-block;
     }
     footer{
         background: url('napkin/border.png') left top repeat-x;
