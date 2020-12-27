@@ -42,14 +42,16 @@ body.napkin{
         max-height: 12em;
     }
 
-    .toc {
-        background: url('napkin/border-vert.png') right top repeat-y;
+    // li.visited {
+    //     list-style-image: url('napkin/tick.png');
+    // }
+
+    li.visited a::before{
+      content:url('napkin/tick.png');
+      // margin-right: 0.3em;
     }
 
-    .toc li.read, .toc li.read.active, .toc li.visited.active, .toc li.visited.active {
-        list-style-image: url('napkin/tick.png');
-    }
-    a, a:visited, .toc a, .toc a:visited, .toc a:active {
+    a, a:visited {
         text-decoration: none;
         color: navy;
     }

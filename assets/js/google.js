@@ -38,7 +38,7 @@ var userChanged = function (user) {
       let token = user.getAuthResponse().id_token;
       if(typeof visiting !== 'undefined') visiting.makeVisit(token);
       if(typeof learntrack_quiz !== 'undefined') learntrack_quiz.userJwt = token;
-      // visiting.loadVisited(token, $(".toc"));
+      visiting.loadVisited(token, $("body"));
     }else{
       googleUser=null;
       googleUserName="";
