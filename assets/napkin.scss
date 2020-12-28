@@ -42,13 +42,8 @@ body.napkin{
         max-height: 12em;
     }
 
-    // li.visited {
-    //     list-style-image: url('napkin/tick.png');
-    // }
-
     li.visited a::before{
       content:url('napkin/tick.png');
-      // margin-right: 0.3em;
     }
 
     a, a:visited {
