@@ -1,8 +1,10 @@
 var auth2; // The Sign-In object.
 var googleUser; // The current user.
 var googleUserName;
+var authSuccess = null;
 
-var appStart = function() {
+var appStart = function(onAuthSuccess) {
+  authSuccess = onAuthSuccess;
     gapi.load('auth2', initSigninV2);
 };
 var initSigninV2 = function() {
@@ -39,6 +41,7 @@ var userChanged = function (user) {
       if(typeof visiting !== 'undefined') visiting.makeVisit(token);
       if(typeof learntrack_quiz !== 'undefined') learntrack_quiz.userJwt = token;
       visiting.loadVisited(token, $("body"));
+      if(typeof authSuccess !== 'undefined') authSuccess();
     }else{
       googleUser=null;
       googleUserName="";
