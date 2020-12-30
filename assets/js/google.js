@@ -38,9 +38,11 @@ var userChanged = function (user) {
       $('body').removeClass('anon');
       $('body').removeClass('unchecked');
       let token = user.getAuthResponse().id_token;
-      if(typeof visiting !== 'undefined') visiting.makeVisit(token);
+      if(typeof visiting !== 'undefined') {
+        visiting.makeVisit(token);
+        visiting.loadVisited(token, $("body"));
+      }
       if(typeof learntrack_quiz !== 'undefined') learntrack_quiz.userJwt = token;
-      visiting.loadVisited(token, $("body"));
       if(typeof authSuccess !== 'undefined') authSuccess();
     }else{
       googleUser=null;
