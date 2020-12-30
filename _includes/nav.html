@@ -2,7 +2,12 @@
   <h1><a href="/">Learning to Burn</a></h1>
   <div class="topmenu">
     {% for theme in site.data.themes %}
-      <div class="theme"><span>{{theme}}</span>{% include menu.html theme=theme%}</div>
+      {% if theme == page.theme %}
+        {% assign active="active" %}
+      {% else %}
+        {% assign active="" %}
+      {% endif %}
+      <div class="theme {{active}}"><span>{{theme}}</span>{% include menu.html theme=theme%}</div>
     {% endfor %}
       <div class="login" id="signInButton">
           <span id="signInLabel">Sign In</span>

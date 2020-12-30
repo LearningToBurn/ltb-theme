@@ -23,6 +23,10 @@ body.napkin{
       background: url('napkin/square.png') center center no-repeat;
       background-size: contain;
     }
+    .nav .topmenu .theme.active{
+      filter: invert(0.1);
+      z-index: 1000;
+    }
 
     .nav .menu li{
       background: white url('napkin/border.png') left bottom repeat-x;
