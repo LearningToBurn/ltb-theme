@@ -1,3 +1,6 @@
+---
+---
+
 html,
 body {
     font-size: 16px;
@@ -8,11 +11,31 @@ body {
 
 
 h1 {
-    font-size: 1.5em;
-    color: #000;
-    font-weight: normal;
+    font-size: 200%;
+    color: #333;
+    font-weight: bold;
 }
+h2 {
+  font-size: 150%;
+  color: #333;
+  font-weight: bold;
+}
+h3 {
+  font-size: 125%;
+  color: #333;
+  font-weight: bold;
+}
+body.lesson {
+  counter-reset: h3counter;
 
+  h1, h2 {
+      counter-reset: h3counter;
+  }
+  h3:before {
+      content: counter(h3counter) ".\0000a0\0000a0";
+      counter-increment: h3counter;
+  }
+}
 
 .section {
     padding: 1em;
@@ -129,52 +152,6 @@ footer {
     flex-direction: row;
 }
 
-.toc{
-    padding-right: 1em;
-    flex: 1 1 12em;
-    height: calc( 100vh - 8em);
-    overflow: hidden; 
-}
-.toc.closed{
-    max-width: 1em;
-}
-.toc.closed ul, .toc.closed ol, .toc.closed ul.active, .toc.closed ul.containsActive, .toc.closed .toggleMe{
-    display: none;
-}
-.toc .hamburger {
-    text-align: right;
-    cursor: pointer;
-    float: right;
-    width: 1.5rem;
-    margin-right: -0.3em;
-}
-
-.toc a, .toc a:visited, .toc a:active {
-    text-decoration: none;
-    color: currentColor;
-}
-
-
-.toc ol, .toc ul{
-    padding-inline-start: 1.4em;
-}
-.toc ul{
-    list-style: none;
-}
-.toc ol ol {
-    list-style-type: lower-alpha;
-}
-.toc li{
-    margin-top: 0.5em;
-}
-
-.toc ol, .toc ul {
-    display: none;
-}
-.toc ol.active, .toc ul.active, .toc ol.containsActive, .toc ul.containsActive {
-    display: block;
-}
-
 .anon .ua_, .unchecked .ua_, .unchecked .ua_anon {
   display: none;
 }
@@ -206,8 +183,22 @@ footer {
     flex-direction: column;
     padding: 0 1em;
     position: relative;
-    background: rgba(255,255,255);
+    background: rgba(255,255,255,1);
     z-index: 20;
+    table{
+      border: 1px gray solid;
+      border-collapse: collapse;
+      margin-left: 3em;
+      td{
+        border: 1px solid gray;
+        padding: 0.5em;
+      }
+      th{
+        border: 1px solid gray;
+        padding: 0.5em;
+
+      }
+    }
 }
 
 .pageContent .two-column {
@@ -260,6 +251,8 @@ ul.lessonCompletion > li {
 .quiz form li > ol > li {
   list-style-type: lower-alpha;
 }
+
+
 
 @media (max-width: 768px) {
     .pageContent{
