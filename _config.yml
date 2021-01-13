@@ -8,3 +8,6 @@ permalink: pretty
 
 plugins:
   - jekyll-relative-links
+
+learntrack: 
+  url: https://learntrack-func.azurewebsites.net
