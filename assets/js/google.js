@@ -28,7 +28,7 @@ var googleAuthor = {
   userChanged: function (user) {
     console.log('User now: ', user);
     googleAuthor.googleUser = user;
-    googleProfile = googleUser.getBasicProfile();
+    googleProfile = googleAuthor.googleUser.getBasicProfile();
     if (googleProfile) {
       googleAuthor.googleUserName = googleProfile.getName();
       console.log(`Signed in as ${googleAuthor.googleUserName}`);
