@@ -43,7 +43,7 @@ var userChanged = function (user) {
         visiting.loadVisited(token, $("body"));
       }
       if(typeof learntrack_quiz !== 'undefined') learntrack_quiz.userJwt = token;
-      if(typeof authSuccess !== 'undefined') authSuccess();
+      if(typeof authSuccess !== 'undefined') authSuccess(token);
     }else{
       googleUser=null;
       googleUserName="";
