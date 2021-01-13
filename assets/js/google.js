@@ -1,14 +1,14 @@
 var googleAuthor = {
 
-  auth2 = null, // The Sign-In object.
-  googleUser = null, // The current user.
-  googleUserName = null, // The name of the current user
-  authSuccess = null, //; A callback.  Set this to a function(token) to get notified of login
+  auth2: null, // The Sign-In object.
+  googleUser: null, // The current user.
+  googleUserName: null, // The name of the current user
+  authSuccess: null, //; A callback.  Set this to a function(token) to get notified of login
 
-  appStart = function () {
+  appStart: function () {
     gapi.load('auth2', googleAuthor.initSigninV2);
   },
-  initSigninV2 = function () {
+  initSigninV2: function () {
     googleAuthor.auth2 = gapi.auth2.init({
       client_id: '1029780837049-00a0kk6usg29br5ibv67bgoh9rs9mg42.apps.googleusercontent.com',
       scope: 'profile'
@@ -25,7 +25,7 @@ var googleAuthor = {
     }
   },
 
-  userChanged = function (user) {
+  userChanged: function (user) {
     console.log('User now: ', user);
     googleAuthor.googleUser = user;
     googleProfile = googleUser.getBasicProfile();
@@ -50,7 +50,7 @@ var googleAuthor = {
     }
   },
 
-  signOutUser = function () {
+  signOutUser: function () {
     console.log("Signing out...")
     googleAuthor.auth2.signOut().then(() => {
       googleAuthor.googleUser = null;
