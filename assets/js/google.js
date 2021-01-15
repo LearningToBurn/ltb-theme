@@ -4,6 +4,7 @@ var googleAuthor = {
   googleUser: null, // The current user.
   googleUserName: null, // The name of the current user
   authSuccess: null, //; A callback.  Set this to a function(token) to get notified of login
+  authNone: null, //; A callback.  Set this to a function() to get notified of load when not signed in
 
   appStart: function () {
     gapi.load('auth2', googleAuthor.initSigninV2);
@@ -47,6 +48,7 @@ var googleAuthor = {
       $('body').addClass('anon');
       $('body').removeClass('unchecked');
       $('body').removeClass('signedIn');
+      if (typeof googleAuthor.authNone !== 'undefined') googleAuthor.authNone();
     }
   },
 
