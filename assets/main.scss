@@ -130,10 +130,10 @@ input.silentInput {
 .signedIn .nav .topmenu .theme:hover .menu {
   display: inline-block;
 }
-.signedIn .nav .topmenu .login {
+.signedIn .nav .login {
   display: none;
 }
-.anon .nav .topmenu .logout, .unchecked .nav .topmenu .logout {
+.anon .nav .logout, .unchecked .nav  .logout {
   display: none;
 }
 
