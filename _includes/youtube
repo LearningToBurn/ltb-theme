@@ -1,0 +1,5 @@
+{% assign widthPct = include.width | default: 60 %}
+<div style="margin:0 auto; width:{{widthPct}}vw">
+<div class="ytcontainer">
+  <iframe class="yt" style='width:{{widthPct}}vw; height:calc( {{widthPct}}vw / 2)' allowfullscreen src="https://www.youtube.com/embed/{{include.id}}"></iframe>
+</div></div>
