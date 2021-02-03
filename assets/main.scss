@@ -271,8 +271,12 @@ ul.lessonCompletion > li {
 .achievements{
   list-style-type: none;
   li{
-    display: inline-block;
-    text-align: center;
+    display: inline;
+    img{
+      vertical-align: middle;
+      max-width: 2em !important;
+      padding: 0 0.5em 0.5em 0;
+    }
   }
 }
 
