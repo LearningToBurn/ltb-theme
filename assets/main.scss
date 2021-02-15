@@ -280,6 +280,15 @@ ul.lessonCompletion > li {
   }
 }
 
+.toast {
+  width: 20%;
+  position: absolute;
+  display: none;
+  right:0;
+}
+.toast.toasting{
+  display: block;
+}
 
 @media (max-width: 768px) {
     .pageContent{
@@ -307,5 +316,7 @@ ul.lessonCompletion > li {
     .toc.closed ul, .toc.closed ol, .toc.closed ul.active, .toc.closed ul.containsActive{
         display: block;
     }
-        
+    .toast {
+      width: 100%;
+    }
 }

@@ -101,6 +101,12 @@ body.napkin{
     ol ol {
       list-style-type: lower-alpha;
     }
-
+    .toast{
+      background: url(napkin/hash-green.png) no-repeat center center;
+      background-size: cover;
+      border: 1px solid #222;
+      z-index: 9999;
+      text-align: center;
+    }
 
 }
