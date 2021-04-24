@@ -4,17 +4,17 @@
 <head>
     <title>{{page.title  }} - Learning to Burn</title>
     <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/main.css">
-    <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/napkin.css">
+    <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/{{page.brand}}.css">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
   </head>
   
-  <body class="lesson napkin unchecked theme_{{page.theme}}" onload="googleAuthor.appStart()"> <!-- Set googleAuthor.authSuccess to a function(token) to get a callback on successful login -->
+  <body class="lesson {{page.brand}} unchecked theme_{{page.theme}}" onload="googleAuthor.appStart()"> <!-- Set googleAuthor.authSuccess to a function(token) to get a callback on successful login -->
     {% include nav.html %}
     {% include toast.html %}
     <div class="page">
       <div class="pageBack" style="background-image: url(''); ">
         <div class="pageContent ua_{{page.user_access}}">
-          <h1 class="topic">Topic: {{page.topic}}</h1>
+          <h1 class="topic">{{page.topic}}</h1>
           <h2>Module {{page.module_order}}: {{page.title}}</h2>
           <blockquote><blockquote><b>Module Objective</b>: {{page.objective}} </blockquote></blockquote>
           {{content}}
