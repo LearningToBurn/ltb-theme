@@ -1,7 +1,7 @@
 ---
 ---
 
-body.scion{
+body.brand_scion{
   --text-color: rgb(66,66,66);
   --text-alt-color: rgb(100,100,120);
   --highlight_color: #227eac;
@@ -109,16 +109,47 @@ body.scion{
       }
       table{
         border-color: var(--border_color);
-        th, td{
+        td{
           border-color: var(--border_color);
+        }
+        th{
+          background-color: var(--highlight_color);
+          border-color: var(--highlight_color);
+          color: var(--reverse_color);
+          font-weight: bold;
+        }
+      }
+      table.table_with_header_column{
+        tr > td:first-child{
+          background-color: var(--highlight_color);
+          border-color: var(--highlight_color);
+          color: var(--reverse_color);
+          font-weight: bold;
         }
       }
       blockquote > blockquote {
         padding: 1em;
         background-color: var(--highlight_color);
+        border: none;
         color: var(--reverse_color);
         margin: 0;
         text-align: center;
+        border-radius: 0;
+      }
+      blockquote {
+        padding: 1em;
+        background-color: var(--border_color);
+        border: 1px solid var(--text-color);
+        border-width: 1px 3px 3px 1px;
+        color: var(--text-color);
+        text-align: left;
+        font-family: monospace;
+        border-radius: 0.25em 0.25em 0.25em 0.25em ;
+
+        p{
+          margin-block-start: 0;
+          margin-block-end: 0;
+        }
       }
     }
   }
@@ -145,7 +176,7 @@ body.scion{
 
 }
 @media (max-width: 768px) {
-  body.scion .nav, body.scion.signedIn .nav {
+  body.brand_scion .nav, body.brand_scion.signedIn .nav {
     h1.logout, h1.login, h1{
       display: none;
     }
