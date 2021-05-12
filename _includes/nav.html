@@ -1,6 +1,20 @@
 <div class="nav">
-  <h1 class="login" ><a href="{{site.baseurl}}/">Learning to Burn</a></h1>
-  <h1 class="logout" ><a href="{{site.baseurl}}/home">Learning to Burn</a></h1>
+  <div class="login" >
+    <h1><a href="{{site.baseurl}}/">Learning to Burn</a></h1>
+    <div id="signInButton">
+      <span id="signInLabel">Sign In</span>
+    </div>
+  </div>
+  <div class="logout">
+    <h1 >
+        <img src='/assets/img/{{site.brand}}_logo.png'>  
+        <a href="{{site.baseurl}}/home">Learning to Burn</a>
+    </h1>
+    <div id="signOutButton" onClick="googleAuthor.signOutUser()">
+      <img id="signOutPic" src="" align="left" />
+      <span id="signOutLabel">Sign Out</span>
+    </div>
+  </div>
   <div class="topmenu">
     {% for theme in site.data.themes %}
       {% if theme == page.theme %}
@@ -10,12 +24,5 @@
       {% endif %}
       <div class="theme {{active}}"><span>{{theme}}</span>{% include menu.html theme=theme%}</div>
     {% endfor %}
-      <div class="login" id="signInButton">
-          <span id="signInLabel">Sign In</span>
-      </div>
-      <div class="logout" id="signOutButton" onClick="googleAuthor.signOutUser()">
-        <img id="signOutPic" src="" align="left" />
-        <span id="signOutLabel">Sign Out</span>
-    </div>
   </div>
 </div>

@@ -30,7 +30,10 @@ body.brand_scion{
       font-variant: small-caps;
     }
     .topmenu{
-      .theme:not(:nth-last-of-type(3)):after{
+      max-width: 1130px;
+      width: 1130px;
+      margin: 0 auto;
+      .theme:not(:nth-last-of-type(1)):after{
         content: url('images/menu_arrow.svg');
         display: block;
         position: absolute;
@@ -51,7 +54,7 @@ body.brand_scion{
           width: 100vw;
           position: fixed;
           left: 0px;
-          top: calc(3em - 2px);
+          top: calc(7em - 2px);
           background-color: var(--text-color);
           color: var(--reverse_color);
 
@@ -150,6 +153,13 @@ body.brand_scion{
           margin-block-start: 0;
           margin-block-end: 0;
         }
+      }
+      section{
+        background: antiquewhite;
+        width: 100vw;
+        margin-left: calc( 0px - 50vw + 557px);
+        padding: 1em calc( 0px + 50vw - 557px );
+        box-sizing: border-box;
       }
     }
   }
