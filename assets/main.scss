@@ -182,6 +182,8 @@ footer {
     background-size: cover;
     min-height: calc( 100vh - 8em);
     position: relative;
+    max-width: 100%;
+    // overflow-x: hidden;
 }
 
 .pageContent{

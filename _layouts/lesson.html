@@ -14,9 +14,10 @@
     <div class="page">
       <div class="pageBack" style="background-image: url(''); ">
         <div class="pageContent ua_{{page.user_access}}">
-          <h1 class="topic">{{page.topic}}</h1>
-          <h2>Module {{page.module_order}}: {{page.title}}</h2>
-          <blockquote><blockquote><b>Module Objective</b>: {{page.objective}} </blockquote></blockquote>
+          <h1>Module {{page.module_order}}: {{page.title}}
+          </h1>
+          <h2 class="topic">{{page.topic}}</h2>
+          <blockquote><b>Module Objective</b>: {{page.objective}} </blockquote>
           {{content}}
         </div>
         <span class="jumbo pageRestriction">This page is restricted.  Please sign in to view.<span> <!-- only shows when above is hidden-->
