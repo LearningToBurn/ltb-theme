@@ -22,12 +22,15 @@ body.brand_napkin{
     .nav .topmenu .theme {
       background: url('napkin/square.png') center center no-repeat;
       background-size: contain;
+      height: 1.4em;
     }
     .nav .topmenu .theme.active{
       filter: invert(0.1);
       z-index: 1000;
     }
-
+    .nav .topmenu .theme:hover .menu {
+      display: block;
+    }
     .nav .menu li{
       background: white url('napkin/border.png') left bottom repeat-x;
     }
@@ -93,7 +96,7 @@ body.brand_napkin{
       background-size: cover;
       text-shadow: 2px 2px 2px white;
     }
-    blockquote blockquote {
+    h2 + blockquote, h3 + blockquote {
       background: white;
       font-size: 150%;
     }

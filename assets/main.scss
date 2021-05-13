@@ -84,18 +84,22 @@ input.silentInput {
 }
 
 .nav .topmenu {
-    display: flex;
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: auto;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+    display: none;
 }
 
 .nav .topmenu > * {
     padding: 0.3em;
     margin: 0.2em;
+}
+
+body.signedIn .nav .topmenu{
+  display: flex;
 }
 
 .nav .theme, .nav .login, .nav .logout {
