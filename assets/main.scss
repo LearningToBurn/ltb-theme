@@ -70,6 +70,9 @@ input.silentInput {
     display: flex;
     flex-direction: column;
 }
+.anon .nav, .unchecked .nav {
+  height: 5em;
+}
 
 .nav h1 {
     letter-spacing: 0.1rem;
