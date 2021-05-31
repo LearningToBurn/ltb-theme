@@ -4,11 +4,11 @@
 <head>
     <title>{{page.title  }} - Learning to Burn</title>
     <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/main.css">
-    <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/brand_{{site.brand}}.css">
+    <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/brand_{{page.brand | default: site.brand}}.css">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
   </head>
   
-  <body class="lesson brand_{{site.brand}} unchecked theme_{{page.theme}}" onload="googleAuthor.appStart()"> <!-- Set googleAuthor.authSuccess to a function(token) to get a callback on successful login -->
+  <body class="lesson brand_{{page.brand | default: site.brand}} unchecked theme_{{page.theme}}" onload="googleAuthor.appStart()"> <!-- Set googleAuthor.authSuccess to a function(token) to get a callback on successful login -->
     {% include nav.html %}
     {% include toast.html %}
     <div class="page">
