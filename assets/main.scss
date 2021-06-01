@@ -69,8 +69,9 @@ input.silentInput {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    overflow-y: hidden;
 }
-.anon .nav, .unchecked .nav {
+.anon .nav, .unchecked .nav, .basic .nav{
   height: 5em;
 }
 
@@ -162,19 +163,47 @@ footer {
 
 .page{
     display: flex;
-    background: white;
+    background: transparent;
     flex-direction: row;
 }
 
-.anon .ua_, .unchecked .ua_, .unchecked .ua_anon {
-  display: none;
+.unchecked {
+  .pageContent{
+    display: none;
+  }
+  .pageRestriction {
+    display: none;
+  }
 }
-.pageRestriction {
-  display: none;
+
+.anon {
+  .ua_ {
+    .pageContent{
+      display: none;
+    }
+    .pageRestriction {
+      display: inherit;
+    }
+  }
+  .ua_anon{
+    .pageContent{
+      display: inherit;
+    }
+    .pageRestriction {
+      display: none;
+    }    
+  }
 }
-.anon .pageRestriction {
-  display: inherit;
+
+.signedIn {
+  .pageContent{
+    display: inherit;
+  }
+  .pageRestriction {
+    display: none;
+  }
 }
+
 
 
 .rhs img{
@@ -187,7 +216,7 @@ footer {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: calc( 100vh - 8em);
+    min-height: calc( 100vh - 10em);
     position: relative;
     max-width: 100%;
     // overflow-x: hidden;
@@ -199,7 +228,7 @@ footer {
     flex-direction: column;
     padding: 0 1em;
     position: relative;
-    background: rgba(255,255,255,1);
+    background: transparent;
     z-index: 20;
     table{
       border: 1px gray solid;
@@ -214,6 +243,10 @@ footer {
         padding: 0.5em;
 
       }
+    }
+    img{
+      max-width: 90%;
+      max-height: calc( 100vh - 12em);
     }
 }
 
