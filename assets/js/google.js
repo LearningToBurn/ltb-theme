@@ -11,7 +11,7 @@ var googleAuthor = {
   },
   initSigninV2: function () {
     googleAuthor.auth2 = gapi.auth2.init({
-      client_id: '1029780837049-00a0kk6usg29br5ibv67bgoh9rs9mg42.apps.googleusercontent.com',
+      client_id: '1029780837049-gughie324tq05p79d57bu7oj6inp1bsd.apps.googleusercontent.com',
       scope: 'profile'
     });
     googleAuthor.auth2.attachClickHandler(document.getElementById('signInButton'));
