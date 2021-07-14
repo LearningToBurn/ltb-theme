@@ -70,7 +70,7 @@ input.silentInput {
     display: flex;
     flex-direction: column;
 }
-.anon .nav, .unchecked .nav, .basic .nav{
+.anon .nav, .unchecked .nav{
   height: 5em;
 }
 
@@ -203,7 +203,10 @@ footer {
   }
 }
 
-
+img.shim {
+  position: fixed;
+  z-index: 999;
+}
 
 .rhs img{
     max-width: 100%;
@@ -243,9 +246,30 @@ footer {
 
       }
     }
+    blockquote, section{
+      position: relative;
+    }
+    ul{
+      z-index: 1;
+    }
     img{
       max-width: 90%;
       max-height: calc( 100vh - 12em);
+    }
+    img.rightbottom{
+      max-width: 45%;
+      max-height: 10em;
+      position: absolute;
+      right: 5px;
+      bottom: 0;
+    }
+    img.leftbottom{
+      max-width: 45%;
+      max-height: 10em;
+      position: absolute;
+      left: 5px;
+      bottom: 0;
+      z-index: 0;
     }
 }
 
@@ -328,6 +352,20 @@ ul.lessonCompletion > li {
   }
 }
 
+.page .pageContent section.half-height{
+  min-height: 500px;
+  padding-top: 3em !important;
+  font-size: 150%;
+}
+
+.naked, .naked li{
+  list-style-type: none;
+  margin-bottom: 0.5em;
+}
+.naked li li{
+  margin-bottom: 0;
+}
+
 .toast {
   width: 20%;
   position: absolute;
@@ -338,6 +376,8 @@ ul.lessonCompletion > li {
 .toast.toasting{
   display: block;
 }
+
+
 
 @media (max-width: 768px) {
     .pageContent{

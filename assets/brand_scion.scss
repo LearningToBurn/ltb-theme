@@ -1,6 +1,9 @@
 ---
 ---
-
+@font-face {
+  font-family: Avenir;
+  src: url(fonts/Avenir.otf);
+}
 
 
 body.brand_scion{
@@ -172,6 +175,15 @@ body.brand_scion{
           color: var(--border_color);
         }
       }
+      section.half-height blockquote{
+        max-width: 75%;
+        border: 0;
+        margin-top: 0;
+        padding-top: 0;
+      }
+      section.half-height h1{
+        font-family: Avenir;
+      }
       
       
       section{
@@ -186,13 +198,13 @@ body.brand_scion{
         background-size: cover;
         
       }
-      section.section_1{ 
+      section.section_0, section.section_4{ 
         background-color: var(--palette_blue); 
         color: var(--reverse_color); 
         a, a:visited {
           color: var(--border_color);
         }
-        h3{
+        h1, h2, h3{
           color: var(--border_color);
         }
         table {
@@ -209,7 +221,7 @@ body.brand_scion{
           }
         }
       }
-      section.section_3{ 
+      section.section_2{ 
         background-color: var(--palette_green); 
         table{
           border-color: var(--text-alt-color);
@@ -217,6 +229,29 @@ body.brand_scion{
             border-color: var(--text-alt-color);
           }
         }
+      }
+      section.dark{
+        color: var(--reverse_color);
+        h1{
+          color: var(--reverse_color);
+        }
+      }
+      section.fill-y{
+        height: 100%;
+      }
+      img.sampleleft, img.sampleright, img.sample {
+        max-width: 60%;
+        box-shadow: 6px 6px 10px var(--text-alt-color);
+        margin-left: 1em;
+        border: 1px solid var(--text-alt-color);
+      }
+      img.sampleleft{
+        float: left;
+        margin-right: 1em;
+      }
+      img.sampleright {
+        float: right;
+        margin-left: 1em;
       }
     }
   }
