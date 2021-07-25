@@ -173,6 +173,14 @@ footer {
   .pageRestriction {
     display: none;
   }
+  .ua_anon{
+    .pageContent{
+      display: inherit;
+    }
+    .pageRestriction {
+      display: none;
+    }    
+  }
 }
 
 .anon {
@@ -353,8 +361,8 @@ ul.lessonCompletion > li {
 }
 
 .page .pageContent section.half-height{
-  min-height: 500px;
-  padding-top: 3em !important;
+  min-height: 600px;
+  padding-top: 5em !important;
   font-size: 150%;
 }
 
